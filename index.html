@@ -12,32 +12,66 @@
 
     <body class="font-['Inter'] font-light bg-gray-50">
         <!-- Navbar -->
-        <nav class="header flex flex-row justify-center gap-8 mx-auto w-fit border border-gray-300 rounded-full px-8 py-4 mt-10 drop-shadow-lg bg-white sticky top-10 z-50">
+        <nav class="header flex flex-row justify-between items-center mx-auto w-fit border border-gray-300 rounded-full px-8 py-4 mt-10 drop-shadow-lg bg-white sticky top-10 z-50 gap-8">
+            <!-- Home Link - Always Visible -->
             <a href="#home" class="flex flex-row items-center gap-2 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-opacity="0" d="M10 14h4v6h-4Z"><animate fill="freeze" attributeName="fill-opacity" begin="1.4s" dur="0.15s" to="0"/></path><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><g stroke-dasharray="16"><path d="M5 21h14"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="16;0"/></path><path stroke-dashoffset="16" d="M5 21v-13M19 21v-13"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.3s" dur="0.3s" to="0"/></path></g><path stroke-dasharray="24" stroke-dashoffset="24" d="M9 21v-8h6v8"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.5s" to="0"/></path><path stroke-dasharray="28" stroke-dashoffset="28" d="M2 10l10 -8l10 8"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.8s" dur="0.6s" to="0"/></path></g></svg>
+                <span data-icon="home"></span>
                 <p>Home</p>
             </a>
-            <a href="#stack" class="flex flex-row items-center gap-1 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="66" d="M22 3v14c0 0.55 -0.45 1 -1 1h-14c-0.55 0 -1 -0.45 -1 -1v-14c0 -0.55 0.45 -1 1 -1h14c0.55 0 1 0.45 1 1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="66;0"/></path><g stroke-dasharray="10" stroke-dashoffset="10"><path d="M10 6h8"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.2s" to="0"/></path><path d="M10 10h8"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.9s" dur="0.2s" to="0"/></path></g><path stroke-dasharray="8" stroke-dashoffset="8" d="M10 14h5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="1.1s" dur="0.2s" to="0"/></path><path d="M2 6v15c0 0.55 0.45 1 1 1h15" opacity="0"><set fill="freeze" attributeName="opacity" begin="1.4s" to="1"/><animate fill="freeze" attributeName="d" begin="1.4s" dur="0.2s" values="M6 3v14c0 0.55 0.45 1 1 1h14;M2 6v15c0 0.55 0.45 1 1 1h15"/></path></g></svg>
-                <p>Stack</p>
-            </a>
-            <a href="#experience" class="flex flex-row items-center gap-2 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" d="M9 7h11c0.55 0 1 0.45 1 1v11c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-11c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="16" stroke-dashoffset="16" d="M9 7v-3c0 -0.55 0.45 -1 1 -1h4c0.55 0 1 0.45 1 1v3"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.3s" to="0"/></path></g></svg>
-                <p>Experience</p>
-            </a>
-            <a href="#projects" class="flex flex-row items-center gap-2 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" d="M7 19h11c2.21 0 4 -1.79 4 -4c0 -2.21 -1.79 -4 -4 -4h-1v-1c0 -2.76 -2.24 -5 -5 -5c-2.42 0 -4.44 1.72 -4.9 4h-0.1c-2.76 0 -5 2.24 -5 5c0 2.76 2.24 5 5 5Z"><animate attributeName="d" dur="12s" keyTimes="0;0.25;0.5;0.75;1" repeatCount="indefinite" values="M7 19h11c2.21 0 4 -1.79 4 -4c0 -2.21 -1.79 -4 -4 -4h-1v-1c0 -2.76 -2.24 -5 -5 -5c-2.42 0 -4.44 1.72 -4.9 4h-0.1c-2.76 0 -5 2.24 -5 5c0 2.76 2.24 5 5 5Z;M6 19h12c2.21 0 4 -1.79 4 -4c0 -2.21 -1.79 -4 -4 -4h0v-1c0 -2.76 -2.24 -5 -5 -5c-2.42 0 -4.44 1.72 -4.9 4h-2.1c-2.76 0 -5 2.24 -5 5c0 2.76 2.24 5 5 5Z;M6 19h11c2.21 0 4 -1.79 4 -4c0 -2.21 -1.79 -4 -4 -4h0v-1c0 -2.76 -2.24 -5 -5 -5c-2.42 0 -4.44 1.72 -4.9 4h-1.1c-2.76 0 -5 2.24 -5 5c0 2.76 2.24 5 5 5Z;M7 19h10c2.21 0 4 -1.79 4 -4c0 -2.21 -1.79 -4 -4 -4h0v-1c0 -2.76 -2.24 -5 -5 -5c-2.42 0 -4.44 1.72 -4.9 4h-0.1c-2.76 0 -5 2.24 -5 5c0 2.76 2.24 5 5 5Z;M7 19h11c2.21 0 4 -1.79 4 -4c0 -2.21 -1.79 -4 -4 -4h-1v-1c0 -2.76 -2.24 -5 -5 -5c-2.42 0 -4.44 1.72 -4.9 4h-0.1c-2.76 0 -5 2.24 -5 5c0 2.76 2.24 5 5 5Z"/><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="60;0"/></path><path stroke-dasharray="6" d="M7 14l2 2M7 14l2 -2M15 14l-2 2M15 14l-2 -2" opacity="0"><animate attributeName="d" dur="6s" keyTimes="0;0.25;0.75;1" repeatCount="indefinite" values="M7 14l2 2M7 14l2 -2M15 14l-2 2M15 14l-2 -2;M6 14l2 2M6 14l2 -2M16 14l-2 2M16 14l-2 -2;M8 14l2 2M8 14l2 -2M14 14l-2 2M14 14l-2 -2;M7 14l2 2M7 14l2 -2M15 14l-2 2M15 14l-2 -2"/><set fill="freeze" attributeName="opacity" begin="0.6s" to="1"/><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.4s" values="6;0"/></path></g></svg>
-                <p>Projects</p>
-            </a>
-            <a href="#about" class="flex flex-row items-center gap-2 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-dasharray="28" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M4 21v-1c0 -3.31 2.69 -6 6 -6h4c3.31 0 6 2.69 6 6v1"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="28;0"/></path><path stroke-dashoffset="28" d="M12 11c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4Z"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.4s" to="0"/></path></g></svg>
-                <p>About</p>
-            </a>
-            <a href="#contact" class="flex flex-row items-center gap-1 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="66" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="66;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.3s" to="0"/></path></g></svg>
-                <p>Contact</p>
-            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div id="nav-links" class="hidden md:flex flex-row gap-8">
+                <a href="#stack" class="flex flex-row items-center gap-2 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
+                    <span data-icon="stack"></span>
+                    <p>Stack</p>
+                </a>
+                <a href="#experience" class="flex flex-row items-center gap-2 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
+                    <span data-icon="experience"></span>
+                    <p>Experience</p>
+                </a>
+                <a href="#projects" class="flex flex-row items-center gap-2 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
+                    <span data-icon="projects"></span>
+                    <p>Projects</p>
+                </a>
+                <a href="#about" class="flex flex-row items-center gap-2 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
+                    <span data-icon="about"></span>
+                    <p>About</p>
+                </a>
+                <a href="#contact" class="flex flex-row items-center gap-1 hover:bg-gray-100 hover:drop-shadow-md rounded-full px-4 py-2 transition-all cursor-pointer">
+                    <span data-icon="contact"></span>
+                    <p>Contact</p>
+                </a>
+            </div>
+
+            <!-- Mobile Burger Menu Button -->
+            <button id="burger-btn" class="md:hidden hover:bg-gray-100 rounded-full p-2 transition-all">
+                <span data-icon="burger"></span>
+            </button>
         </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden fixed top-32 left-1/2 transform -translate-x-1/2 w-64 bg-white border border-gray-300 rounded-3xl shadow-lg z-40 overflow-hidden">
+            <a href="#stack" class="flex flex-row items-center gap-3 hover:bg-gray-100 px-6 py-4 transition-all border-b border-gray-200">
+                <span data-icon="stack"></span>
+                <p class="text-gray-800">Stack</p>
+            </a>
+            <a href="#experience" class="flex flex-row items-center gap-3 hover:bg-gray-100 px-6 py-4 transition-all border-b border-gray-200">
+                <span data-icon="experience"></span>
+                <p class="text-gray-800">Experience</p>
+            </a>
+            <a href="#projects" class="flex flex-row items-center gap-3 hover:bg-gray-100 px-6 py-4 transition-all border-b border-gray-200">
+                <span data-icon="projects"></span>
+                <p class="text-gray-800">Projects</p>
+            </a>
+            <a href="#about" class="flex flex-row items-center gap-3 hover:bg-gray-100 px-6 py-4 transition-all border-b border-gray-200">
+                <span data-icon="about"></span>
+                <p class="text-gray-800">About</p>
+            </a>
+            <a href="#contact" class="flex flex-row items-center gap-3 hover:bg-gray-100 px-6 py-4 transition-all">
+                <span data-icon="contact"></span>
+                <p class="text-gray-800">Contact</p>
+            </a>
+        </div>
 
         <!-- Welcome Hero -->
         <section id="home" class="min-h-screen flex items-center justify-center px-8">
@@ -61,7 +95,7 @@
                     <!-- Bio Text -->
                     <div class="w-full md:w-2/3 space-y-4 text-gray-700">
                         <p class="text-lg">
-                            I'm a student developer at the British Columbia Institute of Technology, currently pursuing a diploma in Computer Systems Technology. My journey into tech began majoring in Health Science before discovering my true passion for computer science through recommendations from friends and former professors.
+                            I'm a student developer at the British Columbia Institute of Technology, currently pursuing a diploma in Computer Systems Technology. My journey into tech began majoring in Health Science before discovering my true passion for Computer Science through recommendations from friends and former professors.
                         </p>
                         <p class="text-lg">
                             What started as a career pivot has become a genuine passion. I thoroughly enjoy creating with code and bringing ideas to life through technology. Whether it's building full-stack web applications or solving complex problems, I find myself unlocking new gears in the development process.
@@ -74,5 +108,6 @@
             </div>
         </section>
     </body>
+    <script src="icons.js"></script>
     <script src="portfolio.js"></script>
 </html>
