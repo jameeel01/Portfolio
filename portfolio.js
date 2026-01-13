@@ -49,24 +49,75 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the typewriter effect after a short delay
     setTimeout(typeWriter, 1000);
 
-    // Initialize Vanta.js clouds background
-    if (typeof VANTA !== 'undefined') {
-        VANTA.CLOUDS({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0xe3f2fd,
-            cloudColor: 0xb0d4f1,
-            cloudShadowColor: 0x8aadc7,
-            sunColor: 0xff9f43,
-            sunGlareColor: 0xff6859,
-            sunlightColor: 0xff9933,
-            speed: 1.00
-        });
+    // Dark mode toggle
+    let vantaEffect = null;
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
+
+    // Initialize Vanta background based on theme
+    function initVantaBackground(theme) {
+        if (vantaEffect) {
+            vantaEffect.destroy();
+        }
+
+        if (theme === 'dark') {
+            if (typeof VANTA !== 'undefined' && VANTA.CLOUDS) {
+                vantaEffect = VANTA.CLOUDS({
+                    el: "#vanta-bg",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    skyColor: 0x1a1a2e,
+                    cloudColor: 0x16213e,
+                    cloudShadowColor: 0x0f3460,
+                    sunColor: 0x533483,
+                    sunGlareColor: 0x7b2cbf,
+                    sunlightColor: 0x9d4edd,
+                    speed: 1
+                });
+            }
+            themeIcon.setAttribute('data-icon', 'moon');
+            themeIcon.innerHTML = getIcon('moon');
+        } else {
+            if (typeof VANTA !== 'undefined' && VANTA.CLOUDS) {
+                vantaEffect = VANTA.CLOUDS({
+                    el: "#vanta-bg",
+                    mouseControls: true,
+                    touchControls: true,
+                    gyroControls: false,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    skyColor: 0x68b8d7,
+                    cloudColor: 0xadc1de,
+                    cloudShadowColor: 0x183550,
+                    sunColor: 0xff9919,
+                    sunGlareColor: 0xff6633,
+                    sunlightColor: 0xff9933,
+                    speed: 1
+                });
+            }
+            themeIcon.setAttribute('data-icon', 'sun');
+            themeIcon.innerHTML = getIcon('sun');
+        }
     }
+
+    // Initialize with current theme
+    initVantaBackground(currentTheme);
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', function() {
+        const newTheme = htmlElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        initVantaBackground(newTheme);
+    });
 });
 
 // Add smooth scrolling to all links
