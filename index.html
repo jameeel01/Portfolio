@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
 
-    <body class="font-['Inter'] font-light bg-gray-50">
+    <body class="font-['Inter'] font-light bg-gradient-to-b from-white via-blue-50 to-blue-100">
 
         <!-- Navbar -->
         <nav class="header flex flex-row justify-between items-center mx-auto w-fit border border-gray-300 rounded-full px-8 py-4 mt-10 drop-shadow-lg bg-white sticky top-10 z-50 gap-8">
@@ -75,7 +75,7 @@
         </div>
 
         <!-- Welcome Hero -->
-        <section id="home" class="min-h-screen flex items-center justify-center px-8">
+        <section id="home" class="min-h-screen flex items-center justify-center px-8 pb-32">
             <div class="max-w-4xl text-center">
                 <h1 class="text-6xl font-bold mb-6 text-gray-900">Hi, I'm Jameel Mohammed</h1>
                 <p class="text-2xl text-gray-600 mb-8">Student Developer | Computer Systems Technology @ BCIT</p>
@@ -147,7 +147,7 @@
         <!-- Projects Section -->
         <section id="projects" class="min-h-screen flex items-center justify-center px-8 py-20">
             <div class="max-w-6xl w-full">
-                <h2 class="text-4xl font-bold mb-16 text-gray-900">Projects</h2>
+                <h2 class="text-4xl font-bold mb-8 text-gray-900">Projects</h2>
                 <div class="space-y-8">
                     <!-- Binge Project -->
                     <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
@@ -267,6 +267,47 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen flex items-center justify-center px-8 py-20">
+            <div class="max-w-6xl w-full">
+                <h2 class="text-5xl md:text-6xl font-bold mb-16 text-gray-900">
+                    Let's connect and build <span class="text-blue-600">together.</span>
+                </h2>
+                <div class="space-y-6">
+                    <!-- Email -->
+                    <a href="mailto:jmohammed14@my.bcit.ca" class="group flex items-center justify-between bg-white hover:bg-gray-50 rounded-3xl p-8 transition-all duration-300 border border-gray-200 shadow-lg">
+                        <div class="flex items-center gap-6">
+                            <div class="bg-gray-100 rounded-2xl p-4 group-hover:bg-gray-200 transition-colors">
+                                <span data-icon="email" class="text-gray-700"></span>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">Email</p>
+                                <p class="text-xl md:text-2xl text-gray-900 font-normal">jmohammed14@my.bcit.ca</p>
+                            </div>
+                        </div>
+                        <svg class="w-8 h-8 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/jameelm01/" target="_blank" class="group flex items-center justify-between bg-white hover:bg-gray-50 rounded-3xl p-8 transition-all duration-300 border border-gray-200 shadow-lg">
+                        <div class="flex items-center gap-6">
+                            <div class="bg-gray-100 rounded-2xl p-4 group-hover:bg-gray-200 transition-colors">
+                                <span data-icon="linkedin" class="text-gray-700"></span>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">LinkedIn</p>
+                                <p class="text-xl md:text-2xl text-gray-900 font-normal">Jameel Mohammed</p>
+                            </div>
+                        </div>
+                        <svg class="w-8 h-8 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
