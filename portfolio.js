@@ -5,6 +5,68 @@ document.addEventListener('DOMContentLoaded', function() {
         const iconName = element.getAttribute('data-icon');
         element.innerHTML = getIcon(iconName);
     });
+
+    // Typewriter effect
+    const phrases = ['Student Developer', 'Avid Snowboarder', 'Available for Hire', 'Aspiring Intern'];
+    let currentPhraseIndex = 0;
+    let currentCharIndex = 0;
+    let isDeleting = false;
+    const typewriterElement = document.getElementById('typewriter-text');
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const pauseBeforeDelete = 2000;
+    const pauseBeforeType = 500;
+
+    function typeWriter() {
+        const currentPhrase = phrases[currentPhraseIndex];
+
+        if (isDeleting) {
+            // Delete characters
+            typewriterElement.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+            currentCharIndex--;
+
+            if (currentCharIndex === 0) {
+                isDeleting = false;
+                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                setTimeout(typeWriter, pauseBeforeType);
+                return;
+            }
+            setTimeout(typeWriter, deletingSpeed);
+        } else {
+            // Type characters
+            typewriterElement.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+            currentCharIndex++;
+
+            if (currentCharIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, pauseBeforeDelete);
+                return;
+            }
+            setTimeout(typeWriter, typingSpeed);
+        }
+    }
+
+    // Start the typewriter effect after a short delay
+    setTimeout(typeWriter, 1000);
+
+    // Initialize Vanta.js clouds background
+    if (typeof VANTA !== 'undefined') {
+        VANTA.CLOUDS({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            skyColor: 0xe3f2fd,
+            cloudColor: 0xb0d4f1,
+            cloudShadowColor: 0x8aadc7,
+            sunColor: 0xff9f43,
+            sunGlareColor: 0xff6859,
+            sunlightColor: 0xff9933,
+            speed: 1.00
+        });
+    }
 });
 
 // Add smooth scrolling to all links
