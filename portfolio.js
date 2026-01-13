@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Typewriter effect
-    const phrases = ['Student Developer', 'Avid Snowboarder', 'Available for Hire', 'Aspiring Intern'];
+    const phrases = ['Student Developer', 'Avid Snowboarder', 'Available for Hire', 'Cat lover', 'Aspiring Intern', 'Car Enthusiast'];
     let currentPhraseIndex = 0;
     let currentCharIndex = 0;
     let isDeleting = false;
