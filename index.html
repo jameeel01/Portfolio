@@ -109,6 +109,21 @@
                 background-color: #475569 !important;
                 box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
             }
+
+            /* Project image container */
+            .project-img-container {
+                height: 280px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+            .project-img-container img {
+                max-height: 100%;
+                width: auto;
+                max-width: 100%;
+                object-fit: contain;
+            }
         </style>
     </head>
 
@@ -237,6 +252,7 @@
                             <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-gray-100 hover:drop-shadow-md transition-all cursor-default">Trello</span>
                             <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-gray-100 hover:drop-shadow-md transition-all cursor-default">Figma</span>
                             <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-gray-100 hover:drop-shadow-md transition-all cursor-default">Agile</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-gray-100 hover:drop-shadow-md transition-all cursor-default">React</span>
                         </div>
                     </div>
 
@@ -259,12 +275,78 @@
             <div class="max-w-6xl w-full">
                 <h2 class="text-4xl font-bold mb-8 text-gray-900">Projects</h2>
                 <div class="space-y-8">
-                    <!-- Binge Project -->
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200 justify-center p-8">
+                    <!-- MedTime Project -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
                         <div class="md:flex">
-                            <div class="md:w-2/5 flex items-center justify-center">
-                                <img src="/images/binge.jpg" alt="Binge App Screenshot" class="binge-light w-full h-auto object-contain rounded-3xl">
-                                <img src="/images/binge.jpg" alt="Binge App Screenshot" class="binge-dark w-full h-auto object-contain rounded-3xl hidden">
+                            <div class="md:w-2/5 bg-white p-8">
+                                <div class="project-img-container rounded-3xl">
+                                    <img src="/images/Dashboard.png" alt="Prescription Reminder Dashboard" class="rounded-3xl">
+                                </div>
+                            </div>
+                            <div class="p-8 md:w-3/5">
+                                <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                                    <h3 class="text-2xl font-semibold text-gray-900">MedTime</h3>
+                                    <span class="text-gray-500 text-sm mt-2 md:mt-0">Jan 2026</span>
+                                </div>
+                                <p class="text-gray-700 mb-4">
+                                    Collaborated in a team of 4 at a hackathon to build a full-stack prescription reminder web application.
+                                    Implemented user authentication through Firebase, connected patient-caregiver roles using MongoDB and user-friendly UI navigation using React.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">React</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Firebase</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">MongoDB</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">JavaScript</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Node.js</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/jameeel01/MedTime" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-2">
+                                        <span data-icon="github"></span>
+                                        View on GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blades of the Rising Sun Project -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                        <div class="md:flex">
+                            <div class="md:w-2/5 bg-gray-900 p-8">
+                                <div class="project-img-container rounded-3xl">
+                                    <img src="/images/BOTRS img.png" alt="Blades of the Rising Sun Logo">
+                                </div>
+                            </div>
+                            <div class="p-8 md:w-3/5">
+                                <div class="flex flex-col md:flex-row justify-between items-start mb-4">
+                                    <h3 class="text-2xl font-semibold text-gray-900">Blades of the Rising Sun</h3>
+                                    <span class="text-gray-500 text-sm mt-2 md:mt-0">Nov – Dec 2025</span>
+                                </div>
+                                <p class="text-gray-700 mb-4">
+                                    Built a modular text-based RPG (MUD) in Python featuring turn-based combat, randomized encounters, and state-driven navigation.
+                                    Validated game logic with structured docstrings, doctests, and unit tests to ensure predictable state transitions and maintainable code.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/jameeel01/Blades-of-the-Rising-Sun" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-2">
+                                        <span data-icon="github"></span>
+                                        View on GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Binge Project -->
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+                        <div class="md:flex">
+                            <div class="md:w-2/5 bg-white p-8">
+                                <div class="project-img-container rounded-3xl">
+                                    <img src="/images/binge.jpg" alt="Binge App Screenshot" class="binge-light rounded-3xl">
+                                    <img src="/images/binge.jpg" alt="Binge App Screenshot" class="binge-dark rounded-3xl hidden">
+                                </div>
                             </div>
                             <div class="p-8 md:w-3/5">
                                 <div class="flex flex-col md:flex-row justify-between items-start mb-4">
@@ -272,7 +354,7 @@
                                     <span class="text-gray-500 text-sm mt-2 md:mt-0">Sep – Dec 2025</span>
                                 </div>
                                 <p class="text-gray-700 mb-4">
-                                    Collaborated in a team of 3 to build a full-stack Tinder-style restaurant discovery web app, displaying the nearest restaurant that met user’s dining needs.
+                                    Collaborated in a team of 3 to build a full-stack Tinder-style restaurant discovery web app, displaying the nearest restaurant that met user's dining needs.
                                     Led weekly Scrum meetings through face-to-face discussions that created assigned work for each developer in a Trello system, creating efficient task breakdown to maximise team output.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mb-4">
@@ -297,8 +379,10 @@
                     <!-- Clashroom Project -->
                     <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
                         <div class="md:flex">
-                            <div class="md:w-2/5 bg-white flex items-center justify-center p-8">
-                                <img src="/images/CLashroom.png" alt="Clashroom App Screenshot" class="w-full h-auto object-contain rounded-3xl">
+                            <div class="md:w-2/5 bg-white p-8">
+                                <div class="project-img-container rounded-3xl">
+                                    <img src="/images/CLashroom.png" alt="Clashroom App Screenshot" class="rounded-3xl">
+                                </div>
                             </div>
                             <div class="p-8 md:w-3/5">
                                 <div class="flex flex-col md:flex-row justify-between items-start mb-4">
@@ -306,7 +390,7 @@
                                     <span class="text-gray-500 text-sm mt-2 md:mt-0">Nov 2025</span>
                                 </div>
                                 <p class="text-gray-700 mb-4">
-                                    Lead developer for a team of four building a classroom-focused web application to support interactive engagement and structured workflows. 
+                                    Lead developer for a team of four building a classroom-focused web application to support interactive engagement and structured workflows.
                                     Implemented client-side logic, Firebase-backed state management, and reusable UI components using modern front-end practices for efficient deployment at a hackathon.
                                 </p>
                                 <div class="flex flex-wrap gap-2 mb-4">
@@ -321,60 +405,6 @@
                                         <span data-icon="github"></span>
                                         View on GitHub
                                     </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Blades of the Rising Sun Project -->
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
-                        <div class="md:flex">
-                            <div class="md:w-2/5 bg-gray-900 flex items-center justify-center p-8">
-                                <img src="/images/BOTRS img.png" alt="Blades of the Rising Sun Logo" class="w-full h-auto">
-                            </div>
-                            <div class="p-8 md:w-3/5">
-                                <div class="flex flex-col md:flex-row justify-between items-start mb-4">
-                                    <h3 class="text-2xl font-semibold text-gray-900">Blades of the Rising Sun</h3>
-                                    <span class="text-gray-500 text-sm mt-2 md:mt-0">Nov – Dec 2025</span>
-                                </div>
-                                <p class="text-gray-700 mb-4">
-                                    Built a modular text-based RPG (MUD) in Python featuring turn-based combat, randomized encounters, and state-driven navigation.
-                                    Validated game logic with structured docstrings, doctests, and unit tests to ensure predictable state transitions and maintainable code.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Python</span>
-                                </div>
-                                <div class="flex gap-4">
-                                    <a href="https://github.com/jameeel01/Blades-of-the-Rising-Sun" target="_blank" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-2">
-                                        <span data-icon="github"></span>
-                                        View on GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Prescription Reminder Project -->
-                    <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
-                        <div class="md:flex">
-                            <div class="md:w-2/5 bg-white flex items-center justify-center p-8">
-                                <img src="/images/Dashboard.png" alt="Prescription Reminder Dashboard" class="w-full h-auto object-contain rounded-3xl">
-                            </div>
-                            <div class="p-8 md:w-3/5">
-                                <div class="flex flex-col md:flex-row justify-between items-start mb-4">
-                                    <h3 class="text-2xl font-semibold text-gray-900">MedTime</h3>
-                                    <span class="text-gray-500 text-sm mt-2 md:mt-0">Jan 2026</span>
-                                </div>
-                                <p class="text-gray-700 mb-4">
-                                    Collaborated in a team of 4 at a hackathon to build a full-stack prescription reminder web application.
-                                    Implemented user authentication through Firebase, connected patient-caregiver roles using MongoDB and user-friendly UI navigation using React.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">React</span>
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Firebase</span>
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">MongoDB</span>
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">JavaScript</span>
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Node.js</span>
                                 </div>
                             </div>
                         </div>
@@ -455,6 +485,26 @@
                             <div class="hidden sm:block">
                                 <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">LinkedIn</p>
                                 <p class="text-xl md:text-2xl text-gray-900 font-normal">Jameel Mohammed</p>
+                            </div>
+                        </div>
+                        <svg class="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/jameeel01" target="_blank" class="group flex items-center justify-between bg-white hover:bg-gray-50 rounded-3xl p-6 sm:p-8 transition-all duration-300 border border-gray-200 shadow-lg">
+                        <div class="flex items-center gap-4 sm:gap-6">
+                            <div class="bg-gray-100 rounded-2xl p-3 sm:p-4 group-hover:bg-blue-100 transition-colors">
+                                <span data-icon="github" class="text-gray-700 group-hover:text-blue-600 transition-colors"></span>
+                            </div>
+                            <!-- Mobile text -->
+                            <div class="sm:hidden">
+                                <p class="text-lg text-gray-900 font-normal">Check out my GitHub!</p>
+                            </div>
+                            <!-- Desktop text -->
+                            <div class="hidden sm:block">
+                                <p class="text-sm text-gray-500 uppercase tracking-wider mb-1">GitHub</p>
+                                <p class="text-xl md:text-2xl text-gray-900 font-normal">jameeel01</p>
                             </div>
                         </div>
                         <svg class="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-2 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
